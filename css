@@ -1,0 +1,68 @@
+/* Configurações gerais do corpo da página */
+body{
+  text-align:center; /* Centraliza todo o conteúdo horizontalmente */
+  font-family:Arial; /* Define a fonte usada no jogo */
+}
+
+/* Estilo da div que vai conter o tabuleiro */
+#tabuleiro{
+  display:grid; /* Transforma a div em um grid para organizar os botões em linhas e colunas */
+  grid-template-columns: repeat(5,60px); /* Cria 5 colunas de 60px cada */
+  gap:5px; /* Espaçamento entre os botões (linha e coluna) */
+  justify-content:center; /* Centraliza o tabuleiro horizontalmente dentro da div */
+  margin:20px; /* Espaço ao redor do tabuleiro */
+}
+
+/* Estilo de cada casa (botão) do tabuleiro */
+.casa{
+  width:60px; /* Largura de cada botão */
+  height:60px; /* Altura de cada botão */
+  font-size:20px; /* Tamanho da fonte (para ✔ ou 💣) */
+  cursor:pointer; /* Mostra o cursor de “mãozinha” quando passa por cima do botão */
+}
+
+/* Estilo do botão Começar / Parar */
+#controle{
+  padding:10px 30px; /* Espaço interno do botão (vertical e horizontal) */
+  font-size:18px; /* Tamanho da fonte do botão */
+  cursor:pointer; /* Mostra cursor de “mãozinha” quando passa por cima */
+}
+
+/* Botão X no canto superior esquerdo */
+#fechar{
+  position: fixed;       /* fixa no canto da tela */
+  top: 10px;             /* distância do topo */
+  left: 10px;            /* distância da esquerda */
+  font-size: 30px;       /* tamanho do X */
+  color: rgb(6, 6, 6);            /* cor do X */
+  text-decoration: none; /* remove sublinhado */
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;         /* fica acima de tudo */
+  transition: 0.2s;
+}
+
+#fechar:hover{
+  color: rgb(247, 238, 238);        /* muda cor quando passar o mouse */
+}
+
+#caixinha{
+  position: fixed;       /* Fixa no canto da tela */
+  top: 10px;             /* Distância do topo */
+  right: 10px;           /* Distância da direita */
+  background-color: rgb(1, 1, 1); /* Cor de destaque */
+  color: rgb(252, 249, 249);          /* Cor do texto */
+  padding: 10px 15px;    /* Espaçamento interno */
+  font-size: 18px;       /* Tamanho da fonte */
+  font-weight: bold;     /* Negrito */
+  border-radius: 8px;    /* Cantos arredondados */
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3); /* Sombra */
+  z-index: 1000;         /* Fica acima de tudo */
+}
+
+#apostar{
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 10px; /* Espaço entre input e botão */
+}
