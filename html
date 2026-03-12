@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Jogo da Mina 5x5</title>
+  <!-- O link abaixo conecta o arquivo style.css, que define como o jogo vai parecer visualmente
+       cores, tamanho do tabuleiro, dos botões, etc -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- Caixa de dinheiro -->
+<div id="caixinha">
+  💵 <span id="dinheiro">0</span>
+</div>
+
+<!-- X para sair/voltar -->
+<a href="outra-pagina.html" id="fechar">×</a>
+
+  <!-- Título do jogo, aparece no topo da página -->
+  <h2>Jogo da Mina 5x5</h2>
+
+  <!-- Div onde o tabuleiro vai ser criado pelo JavaScript -->
+  <div id="tabuleiro"></div>
+  <!-- O JS vai colocar dentro dessa div 25 botões (5x5) que o jogador vai clicar -->
+
+  <!-- Label para explicar o que o input faz -->
+  <label>Quantidade de minas:</label>
+
+<!-- Input para valor da aposta -->
+<label for="valorAposta">Valor da aposta:</label>
+<input type="number" id="valorAposta" min="1" value="10">
+
+<!-- Botão de apostar -->
+<button id="apostar">Apostar!</button>
+
+  <!-- Input numérico onde o jogador escolhe quantas minas quer no tabuleiro -->
+  <input type="number" id="qtdMinas" min="1" max="24" value="5">
+  <!-- min=1 → não permite menos que 1 mina
+       max=24 → não permite mais que 24 minas
+       value=5 → valor padrão ao abrir a página -->
+
+  <br><br> <!-- Espaço entre o input e o botão -->
+
+  <!-- Botão que serve para Começar ou Parar o jogo -->
+  <button id="controle">Começar</button>
+  <!-- Quando o jogador clicar:
+       - Se o jogo não estiver ativo, ele inicia o jogo
+       - Se o jogo já estiver ativo, ele para o jogo -->
+
+  <!-- Conecta o JavaScript que faz o jogo funcionar -->
+  <script src="script.js"></script>
+
+</body>
+</html>
